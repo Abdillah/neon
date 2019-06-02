@@ -14,6 +14,7 @@ nodejs-sys = { version = "0.2.0", optional = true }
 [features]
 default = []
 docs-only = ["neon-sys/docs-only"]
+electron = []
 
 [package.metadata.docs.rs]
 features = ["docs-only"]

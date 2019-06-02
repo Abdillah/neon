@@ -61,3 +61,6 @@ members = [
     "test/dynamic/native",
     "test/napi/native"
 ]
+
+[features]
+electron = []
