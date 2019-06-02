@@ -3,9 +3,9 @@
   "scripts": {
     "preinstall": "echo 'Skipping node-gyp installation as part of npm install.'",
     "configure-release": "node-gyp configure --verbose",
-    "configure-debug": "echo $NEON_RUNTIME_ARGS; node-gyp configure --verbose --debug $NEON_RUNTIME_ARGS",
+    "configure-debug": "node-gyp configure --verbose --debug $NEON_RUNTIME_ARGS",
     "build-release": "node-gyp build",
-    "build-debug": "echo \"ARGS: $NEON_RUNTIME_ARGS\"; node-gyp build --debug $NEON_RUNTIME_ARGS"
+    "build-debug": "node-gyp build --debug $NEON_RUNTIME_ARGS"
   },
   "dependencies": {
     "bindings": "1.2.1",
