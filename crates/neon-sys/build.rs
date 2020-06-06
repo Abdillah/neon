@@ -172,7 +172,7 @@ mod build {
 
         // Run `node-gyp build`.
         npm(native_dir)
-            .args(&["run", if debug() { "build-debug" } else { "build-release" }])
+            .args(&["run", format!("build{}{}", if feature_electron() { "-electron" } else { "" }, if debug() { "-debug" } else { "-release" }).as_str() ])
             .status()
             .ok()
             .expect("Failed to run \"node-gyp build\" for neon-sys!");
@@ -232,5 +232,9 @@ mod build {
             Ok(s) => s == "true",
             Err(_) => false
         }
+    }
+
+    fn feature_electron() -> bool {
+        env::var("CARGO_FEATURE_ELECTRON").is_ok()
     }
 }
