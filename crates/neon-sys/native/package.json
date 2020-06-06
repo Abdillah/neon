@@ -5,11 +5,15 @@
     "configure-release": "node-gyp configure --verbose",
     "configure-debug": "node-gyp configure --verbose --debug",
     "build-release": "node-gyp build",
-    "build-debug": "node-gyp build --debug"
+    "build-debug": "node-gyp build --debug",
+    "build-electron-release": "electron-rebuild -v 9.0.0",
+    "build-electron-debug": "electron-rebuild --debug -v 9.0.0"
   },
   "dependencies": {
     "bindings": "1.2.1",
-    "node-gyp": "^3.5.0",
+    "node-gyp": "^5.0",
+    "electron": "^9.0",
+    "electron-rebuild": "^1.11.0",
     "nan": "^2.14.0"
   }
 }
