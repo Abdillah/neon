@@ -48,6 +48,8 @@ napi-runtime = ["neon-runtime/nodejs-sys"]
 # Feature flag to disable  external dependencies on docs build
 docs-only = ["neon-runtime/docs-only"]
 
+electron = ["neon-runtime/electron"]
+
 [package.metadata.docs.rs]
 features = ["docs-only"]
 
